@@ -15,15 +15,11 @@
 
 Write a brief overview of what your project does and who it's for.
 
-## 🛠 Features
 
-- ✨ Feature 1
-- ⚡ Feature 2
-- 🔒 Feature 3
+## Examples
+```arduino
+import { ProjectModule } from 'yourproject';
 
-## 📸 Screenshots
+const pm = new ProjectModule();
 
-| Example UI | Description |
-|------------|-------------|
-| ![Screenshot](https://your-image-url.com/screenshot1.png) | Home screen |
-| ![Screenshot](https://your-image-url.com/screenshot2.png) | Settings panel |
+pm.doSomethingCool('parameter');
