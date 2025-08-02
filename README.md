@@ -3,7 +3,7 @@
   <img src="./images/header.png" alt="Snowmade Banner" width="100%" />
 </p>
 
-<h1 align="center">Snowmade Button</h1>
+<h1 align="center">SnowmadeButton</h1>
 
 <p align="center">
  Little Arduino based service that can poll buttons are register shor and long presses in a non blocking way.
