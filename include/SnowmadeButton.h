@@ -1,16 +1,17 @@
 #pragma once
 
-class ButtonHandler
-{
-
-public:
-    enum Event
+ enum Event
     {
         NO_INPUT,
         CLICK,
         TICK
     };
-    
+
+class ButtonHandler
+{
+
+public:
+   
     // Constructor #1 with normal button logic - buttonHeld==High==True==1 || buttonReleased==Low==False==0
     // and options to reverse the logic
     // and customize timings
