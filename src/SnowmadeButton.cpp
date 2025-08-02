@@ -1,8 +1,8 @@
-#include "SnowamdeButton.h"
+#include "SnowmadeButton.h"
 #include <Arduino.h>
 
 // Constructor #1
-SnowamdeButton::SnowamdeButton(int inputPin, bool reverseLogic, int holdThreshold, int tickInterval, int debounceThreshold) : _inputPin(inputPin),
+SnowmadeButton::SnowmadeButton(int inputPin, bool reverseLogic, int holdThreshold, int tickInterval, int debounceThreshold) : _inputPin(inputPin),
                                                                                                                              _reverseLogic(reverseLogic),
                                                                                                                              _holdThreshold(holdThreshold),
                                                                                                                              _tickInterval(tickInterval),
@@ -10,44 +10,44 @@ SnowamdeButton::SnowamdeButton(int inputPin, bool reverseLogic, int holdThreshol
 {
 }
 
-void SnowamdeButton::setNextButtonState(ButtonState nextButtonState)
+void SnowmadeButton::setNextButtonState(ButtonState nextButtonState)
 {
     // placehold function
     _previousButtonState = _currentButtonState;
     _currentButtonState = nextButtonState;
 }
 
-void SnowamdeButton::setLongPressTimeout()
+void SnowmadeButton::setLongPressTimeout()
 {
     // sets the timeout, if button being released before the timeout it registers as click, otherwise it is being processed as long press
     _holdTimeout = millis() + _holdThreshold;
 }
 
-void SnowamdeButton::setTickTimeout()
+void SnowmadeButton::setTickTimeout()
 {
     // sets the tick timeout to ensure time intervals between ticks
     _tickTimeout = millis() + _tickInterval;
 }
 
-bool SnowamdeButton::isLongPress()
+bool SnowmadeButton::isLongPress()
 {
     // if user interaction with the button was longer than HOLD_THRESHOLD return true
     return millis() >= _holdTimeout;
 }
 
-bool SnowamdeButton::isTickIntervalElapsed()
+bool SnowmadeButton::isTickIntervalElapsed()
 {
     // check if enough time interval between ticks is elapsed - return true or false accordingly
     return millis() >= _tickTimeout;
 }
 
-bool SnowamdeButton::isClickPossible()
+bool SnowmadeButton::isClickPossible()
 {
     // placeholder function
     return true;
 }
 
-bool SnowamdeButton::isTickPossible()
+bool SnowmadeButton::isTickPossible()
 {
     // check if enough time interval between ticks is elapsed - return true or false acordingly
     if (isTickIntervalElapsed())
@@ -60,13 +60,13 @@ bool SnowamdeButton::isTickPossible()
         return false;
 }
 
-bool SnowamdeButton::reversibleDigitalRead(int inputPin, bool reverseLogic)
+bool SnowmadeButton::reversibleDigitalRead(int inputPin, bool reverseLogic)
 {
-    bool inputValue = digitalRead(inputPin);>
+    bool inputValue = digitalRead(inputPin);
     return reverseLogic ? !inputValue : inputValue;
 }
 
-SnowamdeButton::Event SnowamdeButton::pollButton()
+Event SnowmadeButton::pollButton()
 {
     switch (_currentButtonState)
     {

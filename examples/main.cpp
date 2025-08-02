@@ -13,8 +13,8 @@ SnowmadeButton button(BUTTON_PIN);
 //                          _tickInterval(tickInterval)                 ms interval between ticks while button being held down ; default is 333
 //                          _debounceThreshold(debounceThreshold)       Software debounce is not implemented!
 // Alternative button initialization examples:
-// SnowamdeButton button (3, 0, 800, 333, 100);
-// SnowamdeButton button (3, 1); // PIN 3 reversed logic
+// SnowmadeButton button (3, 0, 800, 333, 100);
+// SnowmadeButton button (3, 1); // PIN 3 reversed logic
 
 void setup()
 {
