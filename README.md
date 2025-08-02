@@ -28,6 +28,7 @@ SnowmadeButton button(BUTTON_PIN);
 
 void setup()
 {
+      Serial.begin(9600);
     pinMode(BUTTON_PIN, INPUT);
 }
 
@@ -41,7 +42,11 @@ void loop()
     case TICK:
         /* execute this code on TICK (long press) event */
         break;
+    case NO_INPUT:
+        /* execute default behavior */
+        break;
     default:
+        Serial.println("Error: pollButton() returned an invalid value");
         break;
     }
 }

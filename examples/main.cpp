@@ -34,7 +34,6 @@ void loop()
         break;
     case NO_INPUT:
         /* execute default behavior */
-        animation.drawFrame();
         break;
     default:
         Serial.println("Error: pollButton() returned an invalid value");
