@@ -18,7 +18,7 @@ Buttons should use hardware debounce, software substitude is not included and no
 
 
 ## Examples
-```arduino
+```cpp
 #include <Arduino.h>
 #include <SnowmadeButton.h>
 
