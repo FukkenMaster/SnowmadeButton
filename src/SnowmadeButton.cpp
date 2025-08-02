@@ -101,7 +101,7 @@ Event SnowmadeButton::pollButton()
         {
             // Serial.println("NOW HOLDING"); //debug
             setNextButtonState(HOLDING);
-            return TICK;
+            return NO_INPUT;
         }
         break;
     case HOLDING:

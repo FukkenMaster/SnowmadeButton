@@ -18,6 +18,7 @@ SnowmadeButton button(BUTTON_PIN);
 
 void setup()
 {
+    Serial.begin(9600);
     pinMode(BUTTON_PIN, INPUT); // set Arduino pin mode
 }
 
@@ -31,7 +32,12 @@ void loop()
     case TICK:
         /* execute this code on TICK (long press) event */
         break;
+    case NO_INPUT:
+        /* execute default behavior */
+        animation.drawFrame();
+        break;
     default:
+        Serial.println("Error: pollButton() returned an invalid value");
         break;
     }
 }
