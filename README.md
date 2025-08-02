@@ -1,6 +1,6 @@
 <!-- Header Image -->
 <p align="center">
-  <img src="images/header.png" alt="Snowmade Banner" width="100%" />
+  <img src="./images/header.png" alt="Snowmade Banner" width="100%" />
 </p>
 
 <h1 align="center">Snowmade Button</h1>
