@@ -28,7 +28,7 @@ SnowmadeButton button(BUTTON_PIN);
 
 void setup()
 {
-      Serial.begin(9600);
+    Serial.begin(9600);
     pinMode(BUTTON_PIN, INPUT);
 }
 
