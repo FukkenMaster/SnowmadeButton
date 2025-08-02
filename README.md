@@ -19,8 +19,29 @@ Buttons should use hardware debounce, software substitude is not included and no
 
 ## Examples
 ```arduino
-import { ProjectModule } from 'yourproject';
+#include <Arduino.h>
+#include <SnowmadeButton.h>
 
-const pm = new ProjectModule();
+#define BUTTON_PIN 3
 
-pm.doSomethingCool('parameter');
+SnowmadeButton button(BUTTON_PIN);
+
+void setup()
+{
+    pinMode(BUTTON_PIN, INPUT);
+}
+
+void loop()
+{
+    switch (button.pollButton())
+    {
+    case CLICK:
+        /* execute this code on CLICK (short press) event */
+        break;
+    case TICK:
+        /* execute this code on TICK (long press) event */
+        break;
+    default:
+        break;
+    }
+}
