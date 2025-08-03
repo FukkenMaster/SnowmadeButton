@@ -1,6 +1,7 @@
 <!-- Header Image -->
 <p align="center">
   <img src="./images/header.png" alt="Snowmade Banner" width="100%" />
+  <img src="https://ru.wikipedia.org/wiki/Arduino#/media/Файл:ArduinoLogo_®.svg" alt="Arduino Logo" width="25%" />
 </p>
 
 <h1 align="center">SnowmadeButton</h1>
@@ -28,7 +29,6 @@ SnowmadeButton button(BUTTON_PIN);
 
 void setup()
 {
-    Serial.begin(9600);
     pinMode(BUTTON_PIN, INPUT);
 }
 
@@ -42,11 +42,7 @@ void loop()
     case TICK:
         /* execute this code on TICK (long press) event */
         break;
-    case NO_INPUT:
-        /* execute default behavior */
-        break;
     default:
-        Serial.println("Error: pollButton() returned an invalid value");
         break;
     }
 }
