@@ -1,7 +1,7 @@
 <!-- Header Image -->
 <p align="center">
   <img src="./images/header.png" alt="Snowmade Banner" width="100%" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Arduino_Logo_Registered.svg" alt="Arduino Logo" width="25%" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Arduino_Logo_Registered.svg" alt="Arduino Logo" width="5%" />
 </p>
 
 <h1 align="center">SnowmadeButton</h1>
