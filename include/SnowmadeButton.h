@@ -1,21 +1,24 @@
 #pragma once
 
- enum Event
-    {
-        NO_INPUT,
-        CLICK,
-        TICK
-    };
+enum Event
+{
+    NO_INPUT,
+    CLICK,
+    TICK
+};
 
 class SnowmadeButton
 {
 
 public:
-   
     // Constructor #1 with normal button logic - buttonHeld==High==True==1 || buttonReleased==Low==False==0
     // and options to reverse the logic
     // and customize timings
-    SnowmadeButton(int inputPin, bool reverseLogic = false, int holdThreshold = 800, int tickInterval = 333, int debounceThreshold = 100);
+    SnowmadeButton(int inputPin,
+                   bool reverseLogic = false,
+                   int holdThreshold = 800,
+                   int tickInterval = 333,
+                   int debounceThreshold = 100);
     Event pollButton();
 
 private:
